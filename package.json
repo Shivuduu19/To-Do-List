@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p"
+    "todo": "git subtree push --prefix dist origin gh-pages"
   },
   "author": "",
   "license": "ISC",
