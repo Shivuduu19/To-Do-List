@@ -1,5 +1,5 @@
 :root {
-  --primary-dark: #81dde0;
+  --primary-dark: #73c6c8;
   --secondary-dark: #444;
   --primary-light: #d2d65f;
   --secondary-light: #e26161;
@@ -212,7 +212,7 @@ i {
 }
 
 .project-preview {
-  width: 1100px;
+  width: 1600px;
   padding: 20px 40px;
   margin: 0 auto;
   color: #ccc;
@@ -230,7 +230,7 @@ i {
   justify-content: space-between;
   padding: 10px;
   background-color: var(--primary-light);
-  margin-bottom: 3px;
+  margin-bottom: 5px;
   cursor: default;
 }
 
