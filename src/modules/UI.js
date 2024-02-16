@@ -296,7 +296,7 @@ export default class UI {
     UI.loadProjects();
   }
 
-  static openNav() {
+  static openNav(e) {
     const nav = document.getElementById("nav");
 
     UI.closeAllPopups();
