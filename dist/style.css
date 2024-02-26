@@ -2,7 +2,7 @@
   --primary-dark: #73c6c8;
   --secondary-dark: #444;
   --primary-light: #d2d65f;
-  --secondary-light: #e26161;
+  --secondary-light: #060000;
 }
 
 *,
@@ -253,6 +253,11 @@ i {
 
 .task-content {
   cursor: pointer;
+  /* text-decoration: line-through; */
+}
+.task-content.checked {
+  text-decoration: line-through;
+  color: #29c4dc;
 }
 
 .task-content.active {
@@ -264,7 +269,7 @@ i {
   height: 24px;
   padding: 5px;
   border: 1px solid #555;
-  background-color: var(--primary-light);
+  background-color: #bf6666;
   color: inherit;
   font-family: inherit;
 }

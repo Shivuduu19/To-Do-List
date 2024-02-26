@@ -33,7 +33,7 @@ export default class UI {
     Storage.getTodoList()
       .getProject(projectName)
       .getTasks()
-      .forEach((task) => UI.createTask(task.name, task.dueDate));
+      .forEach((task) => UI.createTask(task.name, task.dueDate, task.status));
 
     if (projectName !== "Today" && projectName !== "This week") {
       UI.initAddTaskButtons();
@@ -93,13 +93,20 @@ export default class UI {
     UI.initProjectButtons();
   }
 
-  static createTask(name, dueDate) {
+  static createTask(name, dueDate, status) {
     const tasksList = document.getElementById("tasks-list");
+    let taskStatus;
+    // console.log(name, dueDate, status);
+    if (status) {
+      taskStatus = "checked";
+    } else {
+      taskStatus = "";
+    }
     tasksList.innerHTML += `
       <button class="button-task" data-task-button>
         <div class="left-task-panel">
           <i class="far fa-circle"></i>
-          <p class="task-content">${name}</p>
+          <p class="task-content ${taskStatus}">${name}</p>
           <input type="text" class="input-task-name" data-input-task-name>
         </div>
         <div class="right-task-panel">
@@ -402,16 +409,21 @@ export default class UI {
     const projectName = document.getElementById("project-name").textContent;
     const taskName = taskButton.children[0].children[1].textContent;
 
+    // console.log(taskButton.children[0].children[1]);
+
     if (projectName === "Today" || projectName === "This week") {
       const parentProjectName = taskName.split("(")[1].split(")")[0];
-      Storage.deleteTask(parentProjectName, taskName.split(" ")[0]);
+      // Storage.deleteTask(parentProjectName, taskName.split(" ")[0]);
+      Storage.taskStatus(parentProjectName, taskName.split(" ")[0]);
+
       if (projectName === "Today") {
         Storage.updateTodayProject();
       } else {
         Storage.updateWeekProject();
       }
     } else {
-      Storage.deleteTask(projectName, taskName);
+      // Storage.deleteTask(projectName, taskName);
+      Storage.taskStatus(projectName, taskName);
     }
     UI.clearTasks();
     UI.loadTasks(projectName);
