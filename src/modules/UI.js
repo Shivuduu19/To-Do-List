@@ -4,7 +4,7 @@ import Project from "./Project";
 import Task from "./Task";
 
 export default class UI {
-  // LOADING CONTENT
+  // LOADING STEPS
 
   static loadHomepage() {
     UI.loadProjects();
@@ -75,7 +75,7 @@ export default class UI {
     UI.loadTasks(projectName);
   }
 
-  // CREATING CONTENT
+  // CREATING CONTENT STEPS
 
   static createProject(name) {
     const userProjects = document.getElementById("projects-list");
