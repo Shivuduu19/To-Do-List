@@ -112,6 +112,8 @@ i {
 
 .nav.active {
   display: block;
+  position: absolute;
+  z-index: 1;
 }
 
 .button-default-project {
@@ -232,6 +234,7 @@ i {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+  width: 80%;
   background-color: var(--primary-dark);
   margin-bottom: 5px;
   cursor: default;
@@ -337,7 +340,7 @@ i {
 
 .add-task-popup {
   display: none;
-  width: 100%;
+  width: 70%;
   padding: 10px;
   text-align: center;
 }
@@ -423,6 +426,7 @@ i {
   .nav {
     width: 100%;
     display: none;
+    z-index: 2;
   }
 
   .project-preview {

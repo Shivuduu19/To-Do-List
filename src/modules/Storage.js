@@ -8,6 +8,7 @@ export default class Storage {
   }
 
   static getTodoList() {
+    console.log(localStorage.getItem("todoList"));
     const todoList = Object.assign(
       new TodoList(),
       JSON.parse(localStorage.getItem("todoList"))

@@ -305,9 +305,11 @@ export default class UI {
 
   static openNav(e) {
     const nav = document.getElementById("nav");
+    const navButton = document.getElementById("button-open-nav");
 
     UI.closeAllPopups();
     nav.classList.toggle("active");
+    navButton.classList.toggle("active-nav");
   }
 
   // ADD TASK EVENT LISTENERS
