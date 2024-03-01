@@ -1,7 +1,7 @@
 :root {
   --primary-dark: #735876;
   --secondary-dark: #444;
-  --primary-light: #d2d65f;
+  --primary-light: #fcfcf8;
   --secondary-light: #060000;
 }
 
@@ -141,6 +141,7 @@ i {
 .button-add-project {
   margin-top: 10px;
   margin-left: 2px;
+  background-color: ;
   background-color: var(--secondary-light);
   text-align: left;
 }
@@ -151,14 +152,14 @@ i {
 
 .button-project.active,
 .button-default-project.active {
-  background-color: #ccc;
   font-weight: bold;
+  background-color: #ccc;
 }
 
 .button-project:hover,
 .button-default-project:hover,
 .button-add-project:hover {
-  background-color: #ccc;
+  background-color: #772222;
 }
 
 .right-project-panel {
@@ -198,14 +199,16 @@ i {
 
 .button-add-project-popup {
   border: 1px solid #99dd99;
-  background-color: #aaffaa;
+  background-color: #29e029;
   font-weight: bold;
+  border-radius: 40px;
 }
 
 .button-cancel-project-popup {
   border: 1px solid #eeadad;
-  background-color: #ffbebe;
+  background-color: #cc0808;
   font-weight: bold;
+  border-radius: 40px;
 }
 
 .button-add-project-popup:hover {
