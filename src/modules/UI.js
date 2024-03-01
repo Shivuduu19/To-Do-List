@@ -361,7 +361,7 @@ export default class UI {
     }
 
     Storage.addTask(projectName, new Task(taskName));
-    UI.createTask(taskName, "No date");
+    UI.createTask(taskName, "Give date");
     UI.closeAddTaskPopup();
   }
 

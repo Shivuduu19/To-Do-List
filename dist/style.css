@@ -1,5 +1,5 @@
 :root {
-  --primary-dark: #73c6c8;
+  --primary-dark: #735876;
   --secondary-dark: #444;
   --primary-light: #d2d65f;
   --secondary-light: #060000;
@@ -232,9 +232,10 @@ i {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: #735876;
+  background-color: var(--primary-dark);
   margin-bottom: 5px;
   cursor: default;
+  border-radius: 40px;
 }
 
 .button-task:hover {
@@ -317,10 +318,13 @@ i {
 }
 
 .button-add-task {
-  display: block;
+  /* display: flex; */
+  width: 50%;
+  background-color: #444;
   padding-left: 15px;
   margin-top: 10px;
   text-align: left;
+  border-radius: 40px;
 }
 
 .button-add-task.active {
@@ -345,6 +349,8 @@ i {
 .input-add-task-popup {
   border: 1px solid #aaa;
   margin-bottom: 10px;
+  background-color: #060000;
+  border-radius: 40px;
 }
 
 .add-task-popup-buttons {
@@ -356,14 +362,16 @@ i {
 
 .button-add-task-popup {
   border: 1px solid #99dd99;
-  background-color: #aaffaa;
+  background-color: #4bd14b;
   font-weight: bold;
+  border-radius: 40px;
 }
 
 .button-cancel-task-popup {
   border: 1px solid #eeadad;
   background-color: #a72121;
   font-weight: bold;
+  border-radius: 40px;
 }
 
 .button-add-task-popup:hover {
